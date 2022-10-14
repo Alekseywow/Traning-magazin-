@@ -4,13 +4,103 @@
 @import 'fonts';
 // Шрифты
 
-@import 'global';
-// Глобальные стили
-
 @import 'reset';
 // Сброс стилей
 
+@import 'global';
+// Глобальные стили
+
+
+
 // Код для интернет магазина
+
+.header{
+    padding: 50px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        display: flex;
+    }
+    &__logo-text {
+        padding-left: 15px;
+        font-size: 36px;
+        line-height: 58px;
+        color: $title;
+        @extend %rubik-500;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+    &__list-item + .menu__list-item {
+        padding-left: 30px;
+    }
+    &__list-item a{
+        color: $title;
+        @extend %rubik-500;
+    }
+    
+}
+
+.navigation {
+    display: flex;
+    &-link{
+        position: relative;
+    }
+
+
+    &-link_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        height: 51px;
+        background-color: #fcd7b6;
+        border-radius: 24px;
+        margin: 0 10px;
+        justify-content: space-evenly;
+    }
+
+    &-link_search{
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        background-color: #a3bbc8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    &-link_apps{
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        background-color: #a3bbc8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-num {
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background-color: #fff;
+        top: -13px;
+        right: -12px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        color: #000;
+    }
+}
 
 
 
