@@ -103,5 +103,107 @@
 }
 
 
+.footer{
+    &-top {
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #a3bbc8;
+    }
+
+    &-top__title {
+        @extend %dssans-700;
+        font-size: 16px;
+        line-height: 21px;
+        text-transform: uppercase;
+        $title:#243f4d;
+        margin: 27px 0;
+    }
+
+    &-top__item-one {
+        width: 209px;
+        margin-right: 30px;
+    }
+
+    &-top__logo{
+        margin-bottom: 15px;
+    }
+    &-top__street {
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $text;
+    }
+    &-top__phone,
+    &-top__email {
+        
+        font-size: 14px;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: $text;
+    }
+
+    &-top__item-two {
+        width: 145px;
+        margin-right: 30px;
+    }
+    &-top__item-there {
+        max-width: 300px;
+    }
+
+    &-top__text {
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $text;
+        margin-bottom: 27px;
+    }
+    &-top__input {
+        max-width: 175px;
+        width: 100%;
+        border: none;
+        background-color: #fcd7b6;
+        padding: 8px 10px 9px 15px;
+        &::placeholder {
+            @extend %dssans-400;
+            font-size: 12px;
+            line-height: 1.2;
+            color: #234969;
+        }
+    }
+    &-top__btn {
+        border: none;
+        padding: 13px 10px 13px 15px;
+        background-color: #a3bbc8;
+        @extend %dssans-400; 
+        font-size: 14px;
+        line-height: 21px;
+        color: #ffffff;
+    }
+}
+
+.footer-bottom {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-list + .footer-bottom-list {
+        margin-left: 20px;
+    }
+    &-list {
+        position: relative;
+    }
+    &-list span {
+        position: absolute;
+        right: -12px;
+    }
+
+}
+
 
 @import 'media';

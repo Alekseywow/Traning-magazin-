@@ -1,12 +1,31 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-size: 16px;
     line-height: 30px;
     color: #585858;
     @extend %dssans-700;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     max-width: 1770px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+a {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $text;
 }
