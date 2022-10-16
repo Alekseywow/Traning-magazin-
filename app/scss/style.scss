@@ -209,6 +209,27 @@
         color: #436372;
         margin-bottom: 40px;
     }
+    .slick-dots {
+      display: flex;  
+      justify-content: center;
+        li {
+            padding: 0 10px;
+            button {
+                opacity: 0.3;
+                background-color: #ffffff;
+                border: none;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+            &.slick-active{
+                button {
+                    background-color: #fff;
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
 
 .btn-box{
