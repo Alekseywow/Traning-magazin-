@@ -239,7 +239,7 @@
 }
 
 .info {
-    background-color: #fcd7b6;
+    background-color: #ede0d4;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -253,7 +253,113 @@
     &__item-img {
         margin-right: 30px;
     }
+    &__item {
+        width: 210px;
+    }
+    &__items:nth-child(2){
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+    }
+
+
+    &__item-title {
+        @extend %dssans-700;
+        font-size: 18px;
+        line-height: 40px;
+        color: #414141;
+    }
+    &__item-text {
+        @extend %dssans-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #585858;
+    }
 }
+
+.product{
+    max-width: 1200px;
+    margin: 0 auto;
+    &__btn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    &__button + .product__button {
+        margin-left: 15px;
+    }
+    &__button{
+        padding: 0;
+        border: none;
+        background-color: #fff;
+        @extend %dssans-700;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #8b8b8b;
+        &:hover {
+            color: #1a1a1a;
+        }
+        &-active {
+            color: #1a1a1a;
+        }
+    }
+
+    &__inner{
+        display: grid;
+        height: 810px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+    &__item{
+        max-width: 270px;
+        background-color: #fff;
+        box-shadow: 20px 43px 87px 10px rgba(0, 0, 0, 23%);
+        border-radius: 10px;
+        position: relative;
+    }
+    &__item-img {
+        margin: 53px auto;
+    }
+    &__item-title{
+        text-align: center;
+        @extend %dssans-500 ;
+        font-size: 16px;
+        line-height: 40px;
+        color: #243f4d;
+    }
+    &__item-text{
+        text-align: center;
+        @extend %dssans-700;
+        font-size: 16px;
+        line-height: 40px;
+        color: #a3bbc8;
+    }
+    &__item-icons{
+        position: absolute;
+        display: flex;
+        top: 150px;
+        left: 40px;
+    }
+    &__icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__icon:nth-child(2){
+        background-color: #a3bbc8;
+    }
+    &__icon + .product__icon {
+        margin-left: 10px;
+    }
+}   
+
+
+
 
 
 
