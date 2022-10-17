@@ -29,3 +29,20 @@ a {
     text-transform: uppercase;
     color: $text;
 }
+
+.btn-box{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 21px;
+    border: none;
+    background-color: #a3bbc8; 
+    &__descr {
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        color: #ffffff;
+    }
+}

@@ -185,8 +185,10 @@
 }
 
 .smart{
-    background-color: $bgcplashki;
-    padding: 95px 0px;
+    &-top__inner {
+      background-color: $bgcplashki;
+      padding: 95px 0px;
+    }
     &-top__item{
         display: flex !important;
         justify-content: space-between;  
@@ -232,20 +234,24 @@
     }
 }
 
-.btn-box{
-    width: 200px;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 21px;
-    border: none;
-    background-color: #a3bbc8; 
-    &__descr {
-        @extend %rubik-500;
-        font-size: 15px;
-        line-height: 12px;
-        color: #ffffff;
+.product-info {
+    padding-bottom: 170px;
+}
+
+.info {
+    background-color: #fcd7b6;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    &__items {
+        display: flex;
+        width: 566px;
+        padding: 70px 0 70px 145px;
+    }
+    &__item-img {
+        margin-right: 30px;
     }
 }
 
