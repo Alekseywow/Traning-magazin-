@@ -279,86 +279,92 @@
 .product{
     max-width: 1200px;
     margin: 0 auto;
-    &__btn{
+    &__button {
         display: flex;
         justify-content: center;
-        margin-bottom: 50px;
     }
-    &__button + .product__button {
-        margin-left: 15px;
-    }
-    &__button{
-        padding: 0;
+    &__button-link{
         border: none;
-        background-color: #fff;
+        margin-bottom: 78px;
+        padding: 0;
         @extend %dssans-700;
         font-size: 16px;
         line-height: 1.2;
         color: #8b8b8b;
-        &:hover {
+        transition: all .5s;
+        &--active{
             color: #1a1a1a;
         }
-        &-active {
+        &:hover{
             color: #1a1a1a;
+        }
+    }
+    &__button-link + .product__button-link {
+        padding-left: 30px;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }        
+}
+.product__item {
+    width: 270px;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0px 6px 47px 3px rgba(37,37,37, .9);
+    &-img__box{
+        overflow: hidden;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    &-link__box {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        width: 240px;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(300%);
+    }
+    &-link {
+        text-align: center;
+        display: inherit;
+        path{
+            transition: all .3s;
         }
     }
 
-    &__inner{
-        display: grid;
-        height: 810px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
-        
+    &-link:hover {
+        path {
+            fill: red;
+        }
     }
-    &__item{
-        max-width: 270px;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 20px 43px 87px 10px rgba(0, 0, 0, 23%);
-        border-radius: 10px;
-        position: relative;
+    &:hover{
+        .product__item-link__box{
+            transform: translateY(0);
+        }
     }
-    &__item-img {
-        margin: 53px auto;
-    }
-    &__item-title{
-        text-align: center;
-        @extend %dssans-500 ;
+    &-title{
+        @extend %dssans-500;
         font-size: 16px;
         line-height: 40px;
         color: #243f4d;
     }
-    &__item-text{
-        text-align: center;
+    &-price{
         @extend %dssans-700;
         font-size: 16px;
         line-height: 40px;
         color: #a3bbc8;
     }
-    &__item-icons{
-        position: absolute;
-        display: flex;
-        top: 150px;
-        left: 40px;
-    }
-    &__icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    &__icon:nth-child(2){
-        background-color: #a3bbc8;
-    }
-    &__icon + .product__icon {
-        margin-left: 10px;
-    }
-}   
+}
 
 
 .lump {
