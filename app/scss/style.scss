@@ -5,6 +5,7 @@
 // Шрифты
 
 @import 'libs';
+// набор инструментов
 
 @import 'reset';
 // Сброс стилей
@@ -292,6 +293,7 @@
         line-height: 1.2;
         color: #8b8b8b;
         transition: all .5s;
+        background-color: #fff;
         &--active{
             color: #1a1a1a;
         }
@@ -410,6 +412,67 @@
         border: 1px solid #000;
     }
 
+}
+
+.design {
+    &__container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+    }
+    &__button-link{
+        border: none;
+        background-color: #fff;
+        margin-bottom: 78px;
+        padding: 0;
+        @extend %dssans-700;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #8b8b8b;
+        transition: all .5s;
+        &--active{
+            color: #1a1a1a;
+        }
+        &:hover{
+            color: #1a1a1a;
+        }
+    }
+    &__button-link + .design__button-link {
+        padding-left: 30px;
+    }
+    &__inner{
+        display: grid;
+        min-height: 540px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        &-item{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            padding-top: 37px;
+            padding-left: 33px;
+            &__title{
+                width: 170px;
+                @extend %dssans-700;
+                font-size: 20px;
+                line-height: 1.2;
+                color: #1a1a1a;
+                margin-bottom: 15px;
+            }
+            &__subtitle{
+                @extend %dssans-700;
+                font-size: 16px;
+                line-height: 1.2;
+                color: #a3bbc8;
+            }
+        }
+    }
 }
 
 
