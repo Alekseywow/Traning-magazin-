@@ -475,6 +475,16 @@
     }
 }
 
+.play{
+    padding: 150px 0;
+    &__vid{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 
 
